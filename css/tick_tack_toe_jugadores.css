@@ -1,0 +1,98 @@
+/* Estilos básicos y configuración del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Estilos para los títulos */
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el área de juego y el tablero */
+.game-container {
+    display: flex;
+    flex-direction: column; /* Elementos alineados verticalmente */
+    align-items: center;
+    justify-content: center;
+}
+
+#tablero {
+    border-collapse: collapse;
+    border: 2px solid #333;
+}
+
+/* Estilos para las casillas del juego */
+.casilla {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    font-size: 3em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.casilla:hover {
+    background-color: #f2f2f2;
+}
+
+.casilla.x {
+    color: #007bff; /* Azul */
+}
+
+.casilla.o {
+    color: #dc3545; /* Rojo */
+}
+
+/* Estilos para información adicional del usuario */
+.user-info {
+    margin-top: 30px;
+}
+
+/* Estilos para la lista de jugadores en línea */
+.online-players {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.online-players h2 {
+    color: #333;
+}
+
+#online-players-list {
+    list-style: none;
+    padding: 0;
+}
+
+#online-players-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+#online-players-list li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para los botones de invitación */
+button.invite-button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

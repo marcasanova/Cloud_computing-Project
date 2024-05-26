@@ -1,0 +1,220 @@
+/* Establece fuentes y colores básicos */
+body {
+    font-family: 'Press Start 2P', cursive; /* Esta es una tipografía que recuerda a los videojuegos antiguos. Asegúrate de incluirla desde Google Fonts en tu HTML */
+    background-color: #000; /* Fondo negro para resaltar los colores retro */
+    color: #FFFFFF; /* Texto en blanco para contraste */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #333; /* Un gris oscuro para el panel lateral */
+    padding: 20px;
+    width: 250px; /* Un ancho fijo para el sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos del sidebar */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de todos los enlaces */
+}
+
+/* Estilizando el título y la imagen de perfil */
+h1, h2 {
+    font-size: 1.2rem;
+    margin: 10px 0; /* Espaciado alrededor del título y subtítulo */
+    color: #FFD700; /* Un dorado para dar ese toque retro */
+}
+
+/* Estilos para la sección de la imagen de perfil */
+#profile-section {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border: 2px solid #FFD700; /* Borde dorado para resaltar la sección */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra exterior para efecto 'glow' */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados para un look retro-moderno */
+    margin: 20px auto; /* Añade un margen automático en los lados para centrar dentro del sidebar */
+    width: 80%; /* Ajusta el ancho según prefieras */
+    max-width: 200px; /* Ajusta esto según lo que desees para la anchura máxima */
+}
+
+#profile-image {
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor del perfil */
+    border-radius: 50%; /* Mantiene la imagen redonda */
+    display: block; /* Asegura que la imagen no sea en línea */
+    margin: 10px auto; /* Centra la imagen dentro de la sección del perfil */
+}
+
+
+/* Estilos para los botones con efecto de animación */
+button {
+    background-color: #FF4500; /* Un naranja oscuro para el fondo de los botones */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit; /* Hereda la tipografía del body */
+    font-size: 0.8rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave para transform y shadow */
+    position: relative; /* Para el posible pseudo-elemento de brillo */
+    overflow: hidden; /* Asegura que el pseudo-elemento no salga de los bordes redondeados */
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Comienza fuera del botón */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 215, 0, 0.5); /* Un dorado semitransparente para el brillo */
+    transition: left 0.4s ease;
+}
+
+button:hover::after {
+    left: 100%; /* Mueve el brillo a través del botón */
+}
+
+button:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+    box-shadow: 0 0 15px #FFD700; /* Brillo externo */
+}
+
+/* Para un efecto de pulsación */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0px #FFD700;
+    }
+    70% {
+        box-shadow: 0 0 15px #FFD700;
+    }
+    100% {
+        box-shadow: 0 0 0px #FFD700;
+    }
+}
+
+button:focus:not(:active) { /* Cuando el botón está enfocado pero no presionado */
+    animation: pulse 1s infinite;
+}
+
+
+/* Ajustes para la sección de jugadores en línea */
+#online-players-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para que se vea el fondo detrás */
+    border: 2px solid #FFD700; /* Borde dorado para resaltar la sección */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra exterior para efecto 'glow' */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados para un look retro-moderno */
+    margin: 20px 0; /* Asegúrate de que hay espacio alrededor de la lista */
+    width: 80%; /* Ajusta el ancho según prefieras */
+    max-width: 300px; /* O el máximo que desees */
+    align-self: center; /* Centra la sección en la sidebar */
+}
+
+#online-players-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remueve el margen por defecto */
+    color: #FFFFFF; /* Texto en blanco para contraste */
+}
+
+#online-players-list li {
+    background-color: rgba(0, 0, 0, 0.3); /* Cada elemento tiene un fondo ligeramente oscuro */
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+}
+
+
+/* Estilos para el área de contenido */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    position: relative; /* Esto permite posicionar absolutamente elementos internos respecto a este contenedor */
+
+}
+
+.welcome-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio */
+}
+
+.welcome-banner h2 {
+    position: absolute;
+    top: 5px;
+    right: 50px; /* Ajusta según necesidades de diseño */
+    color: #FFD700; /* O el color que prefieras para el texto */
+}
+
+.welcome-banner button {
+    margin-top: 60px; /* Ajusta el valor según sea necesario */
+    margin-left: 20px;
+}
+
+
+/* Posicionamiento del botón de cambio de fondo y bienvenida */
+#change-background-btn, .content h2 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.content h2 {
+    right: initial;
+    left: 20px;
+    top: 10px;
+}
+
+/* Estilizando la tabla de juegos */
+.games-table {
+    display: flex;
+    justify-content: space-evenly; /* Distribuye el espacio de manera uniforme entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    height: 100%; /* Asegura que el contenedor use toda la altura disponible */
+}
+
+/* Estilizando cada juego para que se parezca a la sección de jugadores en línea */
+.game {
+    width: calc(50% - 40px); /* Asigna un ancho al juego, restando el espacio del gap */
+    margin: 20px; /* Añade márgenes para separar los juegos */
+    text-align: center; /* Centra el contenido del juego (imagen y título) */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border: 2px solid #FFD700; /* Borde dorado para resaltar el juego */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra exterior para efecto 'glow' */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados para un look retro-moderno */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Aumenta la duración de la transición */
+}
+
+.game img {
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor del juego */
+    max-height: 200px; /* Ajusta esto según lo que desees para la altura máxima */
+    border-radius: 5px; /* Bordes ligeramente redondeados para las imágenes */
+    transition: transform 0.5s ease; /* Aumenta la duración de la transición para la imagen */
+}
+
+.game h3 {
+    margin-top: 10px; /* Espaciado entre la imagen del juego y su título */
+    color: #FFFFFF; /* Texto en blanco para contraste */
+}
+
+.game:hover, .game:focus {
+    transform: scale(1.1); /* Escala la caja del juego */
+    box-shadow: 0px 0px 20px #FFD700; /* Añade un brillo alrededor del juego */
+}
+
+.game img:hover {
+    transform: scale(1.05); /* Escala la imagen ligeramente para un efecto más notable */
+}

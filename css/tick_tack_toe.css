@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 3px solid #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+#tablero {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.casilla {
+    width: 120px; /* Aumentado de 80px a 120px */
+    height: 120px; /* Aumentado de 80px a 120px */
+    border: 1px solid #FFD700;
+    font-size: 3em; /* Aumentado para mejorar la visibilidad */
+    text-align: center;
+    cursor: pointer;
+    background-color: #333;
+    color: #FFFFFF;
+    font-family: 'Press Start 2P', cursive; /* Usando la misma fuente retro */
+}
+
+.casilla:hover {
+    background-color: rgba(255, 215, 0, 0.3);
+}
+
+.casilla.x {
+    color: #007bff; /* Azul */
+}
+
+.casilla.o {
+    color: #dc3545; /* Rojo */
+}
+
+.user-info {
+    margin-top: 30px;
+    color: #FFD700;
+}
+
+/* Contenedor de resultados */
+.resultado-oculto {
+    display: none;
+}
+
+.resultado-visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Posiciona sobre el contenido de la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo semitransparente */
+    color: white;
+    font-size: 24px; /* Aumenta el tamaño del texto */
+    z-index: 10; /* Asegura que esté sobre otros elementos */
+}
+
+/* Botón de reinicio */
+#botonReinicio {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #FFF;
+    background-color: #c1a400;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Espacio entre el mensaje y el botón */
+    transition: background-color 0.3s ease;
+}
+
+#botonReinicio:hover {
+    background-color: #9b8924; /* Cambio de color al pasar el mouse */
+}
+

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px; /* Limitar el ancho máximo de la tabla */
+}
+
+h1, h2 {
+    color: #FFD700; /* Color dorado para los títulos */
+}
+
+h1 {
+    margin-bottom: 0.5em; /* Espaciado después del título principal */
+}
+
+h2 {
+    margin-bottom: 1em; /* Espaciado antes de la tabla */
+}
+
+table {
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    border-collapse: collapse; /* Colapsar los bordes de las celdas */
+    margin: auto; /* Centrar la tabla horizontalmente */
+    background-color: #333333; /* Fondo oscuro para la tabla */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Sombra para darle profundidad */
+}
+
+th, td {
+    border: 2px solid #FFD700; /* Bordes dorados para las celdas */
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+th {
+    background-color: #222; /* Fondo más oscuro para los encabezados */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #444444; /* Alternar colores para las filas */
+}
+
+/* Estilos para el botón de retorno */
+.return-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #FFF;
+    background-color: #c1a400;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.return-button:hover {
+    background-color: #9b8924; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #FFD700;
+}
+
+.return-button:focus {
+    outline: none;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0px #FFD700;
+    }
+    70% {
+        box-shadow: 0 0 15px #FFD700;
+    }
+    100% {
+        box-shadow: 0 0 0px #FFD700;
+    }
+}
